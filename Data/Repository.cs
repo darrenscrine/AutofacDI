@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Data
+﻿namespace Data
 {
-    public class Repository : Data.IRepository
+    public class Repository : IRepository
     {
         public ILogger Logger { get; set; }
 

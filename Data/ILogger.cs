@@ -1,5 +1,4 @@
-﻿using System;
-namespace Data
+﻿namespace Data
 {
     public interface ILogger
     {

@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
-using Autofac;
-using DiContainer.Controllers;
-using Autofac.Integration.Mvc;
+﻿using System.Web.Http;
 using System.Web.Mvc;
-using Autofac.Core;
+using Autofac;
+using Autofac.Integration.Mvc;
 using Data;
+using DiContainer.Controllers;
+
 namespace DiContainer
 {
     public static class MvcConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            var builder = new Autofac.ContainerBuilder();
+            var builder = new ContainerBuilder();
 
             // You can register controllers all at once using assembly scanning...
             builder.RegisterControllers(typeof(MvcApplication).Assembly);

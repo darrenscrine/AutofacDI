@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace Data
 {
-    public class Logger2 : Data.ILogger
+    public class Logger2 : ILogger
     {
         public void Log(string message)
         {

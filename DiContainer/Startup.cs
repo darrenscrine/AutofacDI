@@ -1,7 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using DiContainer;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(DiContainer.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 namespace DiContainer
 {
     public partial class Startup
