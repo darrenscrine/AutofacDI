@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ILogger.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="Logger3.cs" />
     <Compile Include="Logger2.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
