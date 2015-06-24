@@ -6,7 +6,7 @@ namespace Data
     {
         public void Log(string message)
         {
-            Trace.Write("Written with 'Logger3':" + message);
+            Trace.Write("Written with 'Logger6':" + message);
         }
     }
 }

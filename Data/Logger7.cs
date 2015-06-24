@@ -2,11 +2,11 @@
 
 namespace Data
 {
-    public class Logger5 : ILogger
+    public class Logger7 : ILogger
     {
         public void Log(string message)
         {
-            Trace.Write("Written with 'Logger5':" + message);
+            Trace.Write("Written with 'Logger7':" + message);
         }
     }
 }
