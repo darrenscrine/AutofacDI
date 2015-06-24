@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ILogger.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="Logger6.cs" />
     <Compile Include="Logger5.cs" />
     <Compile Include="Logger4.cs" />
     <Compile Include="Logger3.cs" />
