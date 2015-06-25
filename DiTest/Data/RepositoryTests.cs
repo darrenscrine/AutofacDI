@@ -1,12 +1,24 @@
 ﻿using Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Autofac;
 
 namespace DiTest.Data
 {
     [TestClass]
     public class RepositoryTests
     {
+        private IContainer Container { get; set; }
+
+        [TestInitialize]
+        public void Initialise()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterType<Logger>().As<ILogger>();
+            builder.RegisterType<Repository>().As<IRepository>();
+            Container = builder.Build();
+        }
+
         [TestMethod]
         public void Load_MessageText_IsCorrect()
         {
