@@ -4,6 +4,7 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using Data;
 using DiContainer.Controllers;
+using DiContainer.App_Start.AutofacModules;
 
 namespace DiContainer
 {
@@ -13,18 +14,11 @@ namespace DiContainer
         {
             var builder = new ContainerBuilder();
 
-            // You can register controllers all at once using assembly scanning...
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-
-            // ...or you can register individual controlllers manually.
-            builder.RegisterType<HomeController>().InstancePerRequest();
-
-            builder.RegisterType<Logger2>().As<ILogger>();
-            builder.RegisterType<Repository>().As<IRepository>();
+            builder.RegisterModule<DataModule>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
         }
     }
 }
