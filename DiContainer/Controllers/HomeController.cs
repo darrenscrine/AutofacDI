@@ -5,7 +5,7 @@ namespace DiContainer.Controllers
 {
     public class HomeController : Controller
     {
-        public IRepository Repository { get; set; }
+        private IRepository Repository { get; set; }
 
         public HomeController(IRepository repository)
         {

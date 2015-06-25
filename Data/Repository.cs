@@ -2,7 +2,8 @@
 {
     public class Repository : IRepository
     {
-        public ILogger Logger { get; set; }
+        private ILogger Logger { get; set; }
+        private string _message;
 
         public Repository(ILogger logger)
         {
@@ -11,17 +12,25 @@
 
         public void Load()
         {
-            Logger.Log("Called from load");
+            _message = "Called from load";
+            Logger.Log(_message);
         }
 
         public void Save()
         {
-            Logger.Log("Called from Save");
+            _message = "Called from save";
+            Logger.Log(_message);
+        }
+
+        public string GetMessage()
+        {
+            return _message;
         }
 
         public void Clear()
         {
-            Logger.Log("Called from Clear");
+            _message = "Called from clear";
+            Logger.Log(_message);
         }
     }
 }

@@ -4,7 +4,8 @@
     {
         void Clear();
         void Load();
-        ILogger Logger { get; set; }
         void Save();
+        string ToString();
+        string GetMessage();
     }
 }
