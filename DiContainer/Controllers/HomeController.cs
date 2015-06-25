@@ -14,7 +14,6 @@ namespace DiContainer.Controllers
 
         public ActionResult Index()
         {
-            
             Repository.Load();
             return View();
         }
