@@ -8,15 +8,13 @@ namespace DiTest.Data
     [TestClass]
     public class RepositoryTests
     {
-        private IContainer Container { get; set; }
-
         [TestInitialize]
         public void Initialise()
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<Logger>().As<ILogger>();
             builder.RegisterType<Repository>().As<IRepository>();
-            Container = builder.Build();
+            builder.Build();
         }
 
         [TestMethod]
