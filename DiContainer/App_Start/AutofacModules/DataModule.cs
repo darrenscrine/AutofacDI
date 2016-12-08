@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Autofac;
+﻿using Autofac;
 using Data;
 
-namespace DiContainer.App_Start.AutofacModules
+namespace DiContainer.AutofacModules
 {
     public class DataModule : Autofac.Module
     {
