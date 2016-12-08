@@ -1,5 +1,4 @@
-﻿using Autofac;
-using Data;
+﻿using Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DiTest.Data

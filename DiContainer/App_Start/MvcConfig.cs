@@ -2,9 +2,7 @@
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Data;
-using DiContainer.Controllers;
-using DiContainer.App_Start.AutofacModules;
+using DiContainer.AutofacModules;
 
 namespace DiContainer
 {
